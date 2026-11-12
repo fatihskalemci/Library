@@ -5,9 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
-  
+  <table id="books-table">
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Pages</th>
+      <th>Read status</th>
+    </tr>
+  </table>
+  <button command="show-modal" commandfor="book-form-dialog">Open dialog</button>
+  <dialog id="book-form-dialog">
+    <form method="dialog" id="book-form">
+      <label for="book-name">
+        Book Name
+        <input type="text" id="book-name">
+      </label>
+      <label for="book-author">
+        Author
+        <input type="text" id="book-author">
+      </label>
+      <label for="book-page">
+        Number of pages
+        <input type="number" id="book-page">
+      </label>
+      <label for="book-read">
+        Have read?
+        <input type="checkbox" id="book-read">
+      </label>
+      <button id="book-submit">Submit</button>
+    </form>
+  </dialog>
 </body>
+  <script src="script.js"></script>
 </html>
