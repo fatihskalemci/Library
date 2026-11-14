@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Library</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,28 +13,37 @@
       <th>Author</th>
       <th>Pages</th>
       <th>Read status</th>
+      <th>Action</th>
     </tr>
   </table>
-  <button command="show-modal" commandfor="book-form-dialog">Open dialog</button>
+  <button command="show-modal" commandfor="book-form-dialog" id="add-button">Add new book</button>
   <dialog id="book-form-dialog">
     <form method="dialog" id="book-form">
-      <label for="book-name">
-        Book Name
-        <input type="text" id="book-name">
-      </label>
-      <label for="book-author">
-        Author
-        <input type="text" id="book-author">
-      </label>
-      <label for="book-page">
-        Number of pages
-        <input type="number" id="book-page">
-      </label>
-      <label for="book-read">
-        Have read?
-        <input type="checkbox" id="book-read">
-      </label>
-      <button id="book-submit">Submit</button>
+      <div class="mini-group">
+        <label for="book-name">
+          Book Name
+          <input type="text" id="book-name" required>
+        </label>
+      </div>
+      <div class="mini-group">
+        <label for="book-author">
+          Author
+          <input type="text" id="book-author" required>
+        </label>
+      </div>
+      <div class="mini-group">
+        <label for="book-page">
+          Number of pages
+          <input type="number" id="book-page" required>
+        </label>
+      </div>
+      <div class="mini-group">
+        <label for="book-read">
+          Have read?
+          <input type="checkbox" id="book-read">
+        </label>
+      </div>
+      <div class="dialog-buttons"><button id="book-submit">Add</button></div>
     </form>
   </dialog>
 </body>

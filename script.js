@@ -102,6 +102,10 @@ submitButton.addEventListener("click", (event) => {
   const bookAuthor = document.getElementById("book-author");
   const bookPage = document.getElementById("book-page");
   const bookRead = document.getElementById("book-read");
+  if (!bookName.value | !bookAuthor.value | !bookPage.value) {
+    formDialog.close();
+    return
+  }
   const addedBook = addBookToLibrary(bookName.value, bookAuthor.value, bookPage.value, bookRead.checked)
   addBookToTable(addedBook, table);
 
